@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#0d1a14"/>
+    </linearGradient>
+    <linearGradient id="gbar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <!-- Metric cards -->
+  <rect x="120" y="60" width="300" height="100" rx="12" fill="#1a1a2e" stroke="#1e3a2a" stroke-width="1"/>
+  <text x="150" y="98" font-family="Inter, sans-serif" font-size="13" fill="#6b7280">Total Staked</text>
+  <text x="150" y="135" font-family="Inter, sans-serif" font-size="28" fill="#10b981" font-weight="700">$892M</text>
+  <rect x="460" y="60" width="300" height="100" rx="12" fill="#1a1a2e" stroke="#1e3a2a" stroke-width="1"/>
+  <text x="490" y="98" font-family="Inter, sans-serif" font-size="13" fill="#6b7280">Stakers</text>
+  <text x="490" y="135" font-family="Inter, sans-serif" font-size="28" fill="#f5f5f5" font-weight="700">45.2K</text>
+  <rect x="800" y="60" width="300" height="100" rx="12" fill="#1a1a2e" stroke="#1e3a2a" stroke-width="1"/>
+  <text x="830" y="98" font-family="Inter, sans-serif" font-size="13" fill="#6b7280">Avg APY</text>
+  <text x="830" y="135" font-family="Inter, sans-serif" font-size="28" fill="#f59e0b" font-weight="700">8.4%</text>
+  <rect x="1140" y="60" width="340" height="100" rx="12" fill="#1a1a2e" stroke="#1e3a2a" stroke-width="1"/>
+  <text x="1170" y="98" font-family="Inter, sans-serif" font-size="13" fill="#6b7280">Validator Nodes</text>
+  <text x="1170" y="135" font-family="Inter, sans-serif" font-size="28" fill="#7c3aed" font-weight="700">127</text>
+  <!-- Network visualization -->
+  <circle cx="800" cy="440" r="60" fill="#1a1a2e" stroke="#10b981" stroke-width="3" opacity="0.9"/>
+  <text x="800" y="445" font-family="Inter, sans-serif" font-size="14" fill="#10b981" text-anchor="middle" font-weight="600">B14G</text>
+  <!-- Satellite nodes -->
+  <circle cx="560" cy="320" r="35" fill="#1a1a2e" stroke="#7c3aed" stroke-width="2" opacity="0.7"/>
+  <text x="560" y="325" font-family="Inter, sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle">Stake</text>
+  <circle cx="1040" cy="320" r="35" fill="#1a1a2e" stroke="#7c3aed" stroke-width="2" opacity="0.7"/>
+  <text x="1040" y="325" font-family="Inter, sans-serif" font-size="10" fill="#7c3aed" text-anchor="middle">Yield</text>
+  <circle cx="560" cy="560" r="35" fill="#1a1a2e" stroke="#06b6d4" stroke-width="2" opacity="0.7"/>
+  <text x="560" y="565" font-family="Inter, sans-serif" font-size="10" fill="#06b6d4" text-anchor="middle">LP</text>
+  <circle cx="1040" cy="560" r="35" fill="#1a1a2e" stroke="#06b6d4" stroke-width="2" opacity="0.7"/>
+  <text x="1040" y="565" font-family="Inter, sans-serif" font-size="10" fill="#06b6d4" text-anchor="middle">Gov</text>
+  <circle cx="650" cy="240" r="25" fill="#1a1a2e" stroke="#a855f7" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="950" cy="240" r="25" fill="#1a1a2e" stroke="#a855f7" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="650" cy="640" r="25" fill="#1a1a2e" stroke="#059669" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="950" cy="640" r="25" fill="#1a1a2e" stroke="#059669" stroke-width="1.5" opacity="0.5"/>
+  <!-- Connection lines -->
+  <line x1="740" y1="420" x2="595" y2="340" stroke="#10b981" stroke-width="1.5" opacity="0.3"/>
+  <line x1="860" y1="420" x2="1005" y2="340" stroke="#10b981" stroke-width="1.5" opacity="0.3"/>
+  <line x1="740" y1="460" x2="595" y2="540" stroke="#10b981" stroke-width="1.5" opacity="0.3"/>
+  <line x1="860" y1="460" x2="1005" y2="540" stroke="#10b981" stroke-width="1.5" opacity="0.3"/>
+  <line x1="560" y1="285" x2="650" y2="265" stroke="#7c3aed" stroke-width="1" opacity="0.2"/>
+  <line x1="1040" y1="285" x2="950" y2="265" stroke="#7c3aed" stroke-width="1" opacity="0.2"/>
+  <line x1="560" y1="595" x2="650" y2="615" stroke="#06b6d4" stroke-width="1" opacity="0.2"/>
+  <line x1="1040" y1="595" x2="950" y2="615" stroke="#06b6d4" stroke-width="1" opacity="0.2"/>
+  <!-- Bottom staking chart -->
+  <g>
+    <rect x="120" y="700" width="70" height="120" rx="4" fill="url(#gbar)" opacity="0.5"/>
+    <rect x="210" y="670" width="70" height="150" rx="4" fill="url(#gbar)" opacity="0.6"/>
+    <rect x="300" y="640" width="70" height="180" rx="4" fill="url(#gbar)" opacity="0.65"/>
+    <rect x="390" y="680" width="70" height="140" rx="4" fill="url(#gbar)" opacity="0.55"/>
+    <rect x="480" y="620" width="70" height="200" rx="4" fill="url(#gbar)" opacity="0.7"/>
+    <rect x="570" y="660" width="70" height="160" rx="4" fill="url(#gbar)" opacity="0.6"/>
+    <rect x="660" y="600" width="70" height="220" rx="4" fill="url(#gbar)" opacity="0.75"/>
+    <rect x="750" y="650" width="70" height="170" rx="4" fill="url(#gbar)" opacity="0.6"/>
+    <rect x="840" y="630" width="70" height="190" rx="4" fill="url(#gbar)" opacity="0.7"/>
+    <rect x="930" y="680" width="70" height="140" rx="4" fill="url(#gbar)" opacity="0.55"/>
+    <rect x="1020" y="610" width="70" height="210" rx="4" fill="url(#gbar)" opacity="0.72"/>
+    <rect x="1110" y="590" width="70" height="230" rx="4" fill="url(#gbar)" opacity="0.8"/>
+  </g>
+  <text x="800" y="920" font-family="Inter, sans-serif" font-size="20" fill="#4a4a6a" text-anchor="middle" font-weight="600">B14G Staking Ecosystem</text>
+  <circle cx="800" cy="440" r="250" fill="#10b981" opacity="0.02"/>
+</svg>

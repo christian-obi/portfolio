@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d0d1a"/>
+      <stop offset="100%" style="stop-color:#0d1a1a"/>
+    </linearGradient>
+    <linearGradient id="area1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+    </linearGradient>
+    <linearGradient id="area2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <!-- Grid -->
+  <g stroke="#1e1e3a" stroke-width="1" opacity="0.4">
+    <line x1="100" y1="200" x2="1500" y2="200"/>
+    <line x1="100" y1="350" x2="1500" y2="350"/>
+    <line x1="100" y1="500" x2="1500" y2="500"/>
+    <line x1="100" y1="650" x2="1500" y2="650"/>
+    <line x1="100" y1="800" x2="1500" y2="800"/>
+  </g>
+  <!-- YoY Legend -->
+  <rect x="120" y="60" width="200" height="80" rx="12" fill="#1a1a2e" stroke="#2a2a4a" stroke-width="1"/>
+  <circle cx="150" cy="90" r="6" fill="#7c3aed"/>
+  <text x="170" y="95" font-family="Inter, sans-serif" font-size="14" fill="#a3a3a3">2023</text>
+  <circle cx="150" cy="120" r="6" fill="#10b981"/>
+  <text x="170" y="125" font-family="Inter, sans-serif" font-size="14" fill="#a3a3a3">2024</text>
+  <!-- Year metrics -->
+  <rect x="380" y="60" width="260" height="80" rx="12" fill="#1a1a2e" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="410" y="92" font-family="Inter, sans-serif" font-size="13" fill="#6b7280">YoY Growth</text>
+  <text x="410" y="122" font-family="Inter, sans-serif" font-size="26" fill="#10b981" font-weight="700">+127%</text>
+  <rect x="680" y="60" width="260" height="80" rx="12" fill="#1a1a2e" stroke="#2a2a4a" stroke-width="1"/>
+  <text x="710" y="92" font-family="Inter, sans-serif" font-size="13" fill="#6b7280">Peak TVL</text>
+  <text x="710" y="122" font-family="Inter, sans-serif" font-size="26" fill="#f5f5f5" font-weight="700">$3.8B</text>
+  <!-- 2023 Line (purple) - area fill -->
+  <path d="M100,650 L220,620 L340,580 L460,600 L580,550 L700,520 L820,540 L940,500 L1060,480 L1180,460 L1300,440 L1420,420 L1500,400 L1500,800 L100,800 Z" fill="url(#area1)"/>
+  <polyline points="100,650 220,620 340,580 460,600 580,550 700,520 820,540 940,500 1060,480 1180,460 1300,440 1420,420 1500,400" stroke="#7c3aed" stroke-width="3" fill="none" opacity="0.8"/>
+  <!-- 2024 Line (green) - area fill -->
+  <path d="M100,600 L220,550 L340,480 L460,450 L580,380 L700,350 L820,320 L940,290 L1060,260 L1180,280 L1300,240 L1420,220 L1500,200 L1500,800 L100,800 Z" fill="url(#area2)"/>
+  <polyline points="100,600 220,550 340,480 460,450 580,380 700,350 820,320 940,290 1060,260 1180,280 1300,240 1420,220 1500,200" stroke="#10b981" stroke-width="3" fill="none"/>
+  <!-- Data points -->
+  <g fill="#10b981">
+    <circle cx="580" cy="380" r="5"/><circle cx="940" cy="290" r="5"/><circle cx="1300" cy="240" r="5"/><circle cx="1500" cy="200" r="5"/>
+  </g>
+  <g fill="#7c3aed" opacity="0.8">
+    <circle cx="580" cy="550" r="5"/><circle cx="940" cy="500" r="5"/><circle cx="1300" cy="440" r="5"/><circle cx="1500" cy="400" r="5"/>
+  </g>
+  <!-- Months -->
+  <g font-family="Inter, sans-serif" font-size="13" fill="#4a4a6a" text-anchor="middle">
+    <text x="100" y="830">Jan</text><text x="340" y="830">Mar</text><text x="580" y="830">May</text>
+    <text x="820" y="830">Jul</text><text x="1060" y="830">Sep</text><text x="1300" y="830">Nov</text>
+  </g>
+  <text x="800" y="920" font-family="Inter, sans-serif" font-size="20" fill="#4a4a6a" text-anchor="middle" font-weight="600">Core Blockchain 2024 Review</text>
+  <circle cx="300" cy="400" r="350" fill="#7c3aed" opacity="0.02"/>
+  <circle cx="1200" cy="400" r="350" fill="#10b981" opacity="0.02"/>
+</svg>
