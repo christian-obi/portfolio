@@ -1,74 +1,43 @@
 # Christian Obi - Portfolio Website
 
-A portfolio website showcasing blockchain analytics dashboards and speaking engagements.
+A single-page portfolio showcasing blockchain analytics dashboards and speaking engagements.
+Plain HTML + CSS with a small inline script, no build step.
 
-## 🚀 Live Site
+## Live Site
 
 Visit: `https://christian-obi.github.io/portfolio/`
 
-## 📸 Adding Your Images
+## Features
 
-### Dashboard Screenshots
+- Floating glass navigation with scroll-spy and a mobile menu
+- Light / dark theme toggle (follows the system setting, remembers the visitor's choice)
+- Bento-style hero, about and stats layout
+- Project grid with ecosystem filters (Core, NEAR, Monad, Arbitrum)
+- Speaking gallery, copy-to-clipboard email, scroll reveal animations
+- Respects `prefers-reduced-motion`; keyboard focus styles and a skip link
 
-Add screenshots of your dashboards to `images/dashboards/`:
+## Editing Content
 
-| File Name | Dashboard |
-|-----------|-----------|
-| `dex-tracker.png` | DEX Tracker |
-| `core-blockchain-q1.png` | Core Blockchain Q1 2025 |
-| `core-blockchain-yoy.png` | Core Blockchain 2024 Review |
-| `near-bridge.png` | NEAR Bridge Overview |
-| `metaplex.png` | Metaplex Analytics |
-| `curvance-monad.png` | Curvance Monad |
-| `b14g-ecosystem.png` | B14G Ecosystem |
-| `whale-vs-price.png` | Whale vs Price Impact |
-| `token-heatmap.png` | Token Correlation Heatmap |
+All content lives in `index.html`, grouped by section (`#home`, `#about`, `#services`, `#work`, `#speaking`, `#contact`).
 
-**Recommended size:** 1600x1000px (16:10 aspect ratio)
+### Add a dashboard
 
-### Speaking Engagement Photos
+Copy one of the `<a class="card project reveal">` blocks inside `#work` and update:
+- the GitHub URL
+- the image in `images/dashboards/` (16:10, e.g. 1600x1000)
+- the tags, title and description
+- `data-tags` (lowercase ecosystem name, used by the filter buttons)
 
-Add your speaking photos to `images/speaking/`:
+### Add a speaking engagement
 
-| File Name | Event |
-|-----------|-------|
-| `event-1.jpg` | First speaking event |
-| `event-2.jpg` | Second speaking event |
-| `event-3.jpg` | Third speaking event |
+Copy an `<article class="card talk reveal">` block inside `#speaking`, add the photo to `images/`
+(resize to ~1200px on the long side to keep the page fast) and update the event name and details.
 
-Then update the event details in `index.html` (lines 185-214).
+### Change colours
 
-## 🛠️ Customization
+Edit the design tokens at the top of `styles.css`: the `:root` block is the dark theme and
+`:root[data-theme="light"]` is the light theme. `--brand` and `--accent` drive the gradient.
 
-### Update Social Links
+## Deploying
 
-Edit `index.html` lines 232-239 to update your GitHub and Twitter links.
-
-### Add More Dashboards
-
-Copy a dashboard card block (lines 51-62 in `index.html`) and update:
-- GitHub repo URL
-- Image path
-- Title and description
-- Tech stack tags
-
-### Change Colors
-
-Edit CSS variables in `styles.css` (lines 2-12):
-- `--primary`: Main accent color (purple)
-- `--secondary`: Secondary color (green)
-- `--background`: Page background
-
-## 📦 Deploying
-
-The site is configured for GitHub Pages. It will automatically deploy from the `main` branch.
-
-To enable GitHub Pages:
-1. Go to repository Settings → Pages
-2. Source: Deploy from a branch
-3. Branch: `main` / `/ (root)`
-4. Click Save
-
----
-
-Built with 💜 by Christian Obi
+The site deploys to GitHub Pages from the `main` branch via the workflow in `.github/workflows/`.

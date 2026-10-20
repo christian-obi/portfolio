@@ -1,419 +1,500 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christian Obi | Blockchain Data Analyst & Speaker</title>
+    <title>Christian Obi | Blockchain Data Analyst &amp; Speaker</title>
+    <meta name="description" content="Christian Obi is a blockchain data analyst and speaker turning complex on-chain data into clear dashboards and insights across Core, NEAR, Arbitrum and Monad.">
+    <meta name="theme-color" content="#08080b">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Christian Obi | Blockchain Data Analyst &amp; Speaker">
+    <meta property="og:description" content="Making Web3 simple with data. On-chain analytics, dashboards and talks.">
+    <meta property="og:image" content="images/event1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Apply saved theme before paint to avoid a flash
+        try {
+            const saved = localStorage.getItem('theme');
+            if (saved) document.documentElement.dataset.theme = saved;
+            else if (matchMedia('(prefers-color-scheme: light)').matches) document.documentElement.dataset.theme = 'light';
+        } catch (e) {}
+    </script>
 </head>
 <body>
 
-    <!-- ========================= SIDEBAR ========================= -->
-    <aside class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <div class="sidebar-profile-picture">
-                <img src="images/profilepics1.JPG" alt="Christian Obi">
-            </div>
-            <h2 class="sidebar-name">Christian Obi</h2>
-            <p class="sidebar-role">Blockchain Data Analyst &amp; Speaker</p>
-        </div>
+    <a href="#main" class="skip-link">Skip to content</a>
 
-        <nav class="sidebar-nav">
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
+    <!-- ========================= NAV ========================= -->
+    <header class="nav-wrap">
+        <nav class="nav" aria-label="Primary">
+            <a href="#home" class="nav-logo" aria-label="Christian Obi, home">
+                <img src="images/profilepics1.JPG" alt="" width="28" height="28">
+                <span>Christian Obi</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#work">Work</a></li>
                 <li><a href="#speaking">Speaking</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" aria-label="Toggle colour theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <a href="#contact" class="btn btn-primary btn-sm nav-cta">Let's talk</a>
+                <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+                    <span></span><span></span>
+                </button>
+            </div>
         </nav>
-
-        <div class="sidebar-social">
-            <a href="https://github.com/christian-obi" target="_blank" aria-label="GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-            <a href="https://twitter.com/christian_obi" target="_blank" aria-label="Twitter / X">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/in/obi-christian/" target="_blank" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-        </div>
-
-        <a href="#contact" class="sidebar-cta">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            Let's Talk!
-        </a>
-    </aside>
-
-    <!-- Mobile Header -->
-    <header class="mobile-header">
-        <span class="mobile-logo">CO.</span>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
     </header>
 
-    <!-- ========================= MAIN CONTENT ========================= -->
-    <main class="main-content">
+    <main id="main">
 
-        <!-- Home Section -->
-        <section class="home" id="home">
-            <div class="home-glow home-glow-1"></div>
-            <div class="home-glow home-glow-2"></div>
-            <div class="container">
-                <p class="section-tag">Welcome</p>
-                <h1 class="home-heading">
-                    Hi, I'm <span class="gradient-text">Christian Obi</span><br>
-                    A Blockchain Data Analyst &amp; Speaker
-                </h1>
-                <p class="home-description">
-                    I analyze blockchain data and build beautifully simple dashboards,
-                    and I love what I do. Making Web3 simple with data!
-                </p>
-                <div class="home-stats">
-                    <div class="stat">
-                        <h2>3+</h2>
-                        <p>Years of<br>Experience</p>
+        <!-- ========================= HERO ========================= -->
+        <section class="hero" id="home">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="container hero-grid">
+
+                <div class="hero-main reveal">
+                    <span class="pill"><span class="pulse" aria-hidden="true"></span>Open to analytics &amp; speaking work</span>
+                    <h1 class="hero-title">
+                        Making Web3 <br class="br-md">simple <span class="gradient-text">with data.</span>
+                    </h1>
+                    <p class="hero-lead">
+                        I'm Christian Obi, a blockchain data analyst &amp; speaker. I turn raw on-chain
+                        data into dashboards and insights that teams can actually act on.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#work" class="btn btn-primary">
+                            View my work
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-ghost">Get in touch</a>
                     </div>
-                    <div class="stat">
-                        <h2>6+</h2>
-                        <p>Dashboards<br>Built</p>
+                </div>
+
+                <aside class="hero-side">
+                    <div class="card profile-card reveal">
+                        <img src="images/profilepics1.JPG" alt="Portrait of Christian Obi" width="72" height="72">
+                        <div>
+                            <p class="profile-name">Christian Obi</p>
+                            <p class="profile-role">Data Analyst · Speaker</p>
+                        </div>
+                        <div class="profile-socials">
+                            <a href="https://github.com/christian-obi" target="_blank" rel="noopener" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                            <a href="https://twitter.com/christian_obi" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/obi-christian/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="stat">
-                        <h2>5+</h2>
-                        <p>Blockchain<br>Ecosystems</p>
+
+                    <div class="stats">
+                        <div class="card stat reveal">
+                            <p class="stat-value">3+</p>
+                            <p class="stat-label">Years of experience</p>
+                        </div>
+                        <div class="card stat reveal">
+                            <p class="stat-value">6+</p>
+                            <p class="stat-label">Dashboards shipped</p>
+                        </div>
+                        <div class="card stat stat-wide reveal">
+                            <div>
+                                <p class="stat-value">5+</p>
+                                <p class="stat-label">Blockchain ecosystems analysed</p>
+                            </div>
+                            <svg class="sparkline" viewBox="0 0 120 40" preserveAspectRatio="none" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="spark-fill" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.35"/>
+                                        <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M0 34 L12 30 L24 32 L36 24 L48 26 L60 18 L72 21 L84 12 L96 14 L108 6 L120 4 L120 40 L0 40 Z" fill="url(#spark-fill)"/>
+                                <path d="M0 34 L12 30 L24 32 L36 24 L48 26 L60 18 L72 21 L84 12 L96 14 L108 6 L120 4" fill="none" stroke="var(--accent)" stroke-width="2" vector-effect="non-scaling-stroke"/>
+                            </svg>
+                        </div>
                     </div>
+                </aside>
+            </div>
+
+            <div class="marquee" aria-label="Ecosystems and tools">
+                <div class="marquee-track">
+                    <span>Core</span><span>NEAR</span><span>Arbitrum</span><span>Monad</span><span>B14G</span><span>DeFi</span><span>Python</span><span>SQL</span><span>Plotly</span><span>GraphQL</span>
+                    <span aria-hidden="true">Core</span><span aria-hidden="true">NEAR</span><span aria-hidden="true">Arbitrum</span><span aria-hidden="true">Monad</span><span aria-hidden="true">B14G</span><span aria-hidden="true">DeFi</span><span aria-hidden="true">Python</span><span aria-hidden="true">SQL</span><span aria-hidden="true">Plotly</span><span aria-hidden="true">GraphQL</span>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section class="about" id="about">
+        <!-- ========================= ABOUT ========================= -->
+        <section class="section" id="about">
             <div class="container">
-                <p class="section-tag">About Me</p>
-                <h2 class="section-title">Blockchain Data Analyst &amp;<br>Speaker</h2>
-                <div class="about-content">
-                    <div class="about-image">
-                        <img src="images/profilepics1.JPG" alt="Christian Obi">
-                    </div>
-                    <div class="about-text">
+                <div class="section-head reveal">
+                    <p class="eyebrow">01 · About</p>
+                    <h2 class="section-title">Data scientist by craft.<br><span class="muted">Storyteller on stage.</span></h2>
+                </div>
+
+                <div class="bento about-bento">
+                    <div class="card about-text reveal">
                         <p>
-                            I am a data scientist and blockchain analyst specializing in turning complex
+                            I'm a data scientist and blockchain analyst specialising in turning complex
                             on-chain data into clear, actionable intelligence. I build interactive dashboards,
-                            statistical models, and AI-driven tools that decode DeFi protocols, track whale
-                            behavior, and surface insights across ecosystems like Core, NEAR, Arbitrum,
-                            and Monad.
+                            statistical models and AI-driven tools that decode DeFi protocols, track whale
+                            behaviour, and surface insights across ecosystems like <strong>Core</strong>,
+                            <strong>NEAR</strong>, <strong>Arbitrum</strong> and <strong>Monad</strong>.
                         </p>
                         <p>
-                            As a speaker, I share insights on blockchain analytics and data-driven
-                            decision making at conferences and industry events. Whether it's visualizing
-                            onchain metrics or speaking on stage, I bring a detail-oriented and innovative
-                            approach to every project.
+                            As a speaker, I share insights on blockchain analytics and data-driven decision
+                            making at conferences and community events. Whether it's visualising on-chain
+                            metrics or speaking on stage, I bring a detail-oriented, curious approach to every project.
                         </p>
+                    </div>
+                    <figure class="card about-photo reveal">
+                        <img src="images/event1.jpg" alt="Christian Obi speaking at the Web3Lagos Conference" loading="lazy">
+                        <figcaption>On stage at Web3Lagos</figcaption>
+                    </figure>
+                    <div class="card about-fact fact-1 reveal">
+                        <span class="fact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 6-6"/></svg>
+                        </span>
+                        <p class="fact-title">On-chain first</p>
+                        <p class="fact-text">Every insight starts from raw transactions, not headlines.</p>
+                    </div>
+                    <div class="card about-fact fact-2 reveal">
+                        <span class="fact-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </span>
+                        <p class="fact-title">Simple by design</p>
+                        <p class="fact-text">Dashboards that answer one question well, at a glance.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section class="services" id="services">
+        <!-- ========================= SERVICES ========================= -->
+        <section class="section" id="services">
             <div class="container">
-                <p class="section-tag">Services</p>
-                <h2 class="section-title">My Specialization</h2>
+                <div class="section-head reveal">
+                    <p class="eyebrow">02 · Services</p>
+                    <h2 class="section-title">What I can do for you</h2>
+                </div>
+
                 <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                    <article class="card service reveal">
+                        <span class="service-num">01</span>
+                        <div class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
                         </div>
                         <h3>Blockchain Data Analysis</h3>
-                        <p>I analyze blockchain data for DeFi protocols, L1/L2 ecosystems, and blockchain projects &mdash; turning raw on-chain data into actionable insights and dashboards.</p>
-                        <a href="https://github.com/christian-obi" target="_blank" class="service-link">Explore My GitHub &rarr;</a>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                        <p>Analysis for DeFi protocols, L1/L2 ecosystems and Web3 projects, turning raw on-chain data into actionable insights and dashboards.</p>
+                        <a href="https://github.com/christian-obi" target="_blank" rel="noopener" class="link-arrow">Explore my GitHub <span aria-hidden="true">↗</span></a>
+                    </article>
+                    <article class="card service reveal">
+                        <span class="service-num">02</span>
+                        <div class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                         </div>
                         <h3>Data Science &amp; AI</h3>
-                        <p>I build statistical models and AI-driven tools to decode DeFi protocols, track whale behavior, and surface insights across multiple blockchain ecosystems.</p>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        <p>Statistical models and AI-driven tools that decode DeFi protocols, track whale behaviour and surface insights across multiple chains.</p>
+                    </article>
+                    <article class="card service reveal">
+                        <span class="service-num">03</span>
+                        <div class="service-icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
                         </div>
                         <h3>Speaking &amp; Consulting</h3>
-                        <p>I speak at industry events on blockchain analytics and data-driven decision making, and consult for teams looking to integrate on-chain intelligence.</p>
-                    </div>
+                        <p>Talks and panels on blockchain analytics and data-driven decision making, plus consulting for teams integrating on-chain intelligence.</p>
+                    </article>
+                </div>
+
+                <div class="skills reveal" aria-label="Skills and tools">
+                    <p class="skills-label">Toolkit</p>
+                    <ul class="skills-list">
+                        <li><span class="skill-dot"></span>Python <small>analysis &amp; automation</small></li>
+                        <li><span class="skill-dot"></span>SQL <small>on-chain queries</small></li>
+                        <li><span class="skill-dot"></span>Data Visualisation <small>Matplotlib · Plotly · Seaborn</small></li>
+                        <li><span class="skill-dot"></span>React / Node.js <small>full-stack</small></li>
+                        <li><span class="skill-dot"></span>GraphQL / APIs <small>data integrations</small></li>
+                        <li><span class="skill-dot"></span>Cloud <small>AWS · GCP · Azure</small></li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Skills Section -->
-        <section class="skills" id="skills">
+        <!-- ========================= WORK ========================= -->
+        <section class="section" id="work">
             <div class="container">
-                <p class="section-tag">My Skills</p>
-                <h2 class="section-title">My Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-widget">
-                        <div class="skill-widget-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        </div>
-                        <h3 class="skill-widget-name">Python</h3>
-                        <p class="skill-widget-desc">Data analysis, scripting &amp; automation</p>
+                <div class="section-head section-head-row reveal">
+                    <div>
+                        <p class="eyebrow">03 · Selected work</p>
+                        <h2 class="section-title">Featured dashboards</h2>
                     </div>
-                    <div class="skill-widget">
-                        <div class="skill-widget-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                        </div>
-                        <h3 class="skill-widget-name">SQL</h3>
-                        <p class="skill-widget-desc">Database queries &amp; on-chain analytics</p>
-                    </div>
-                    <div class="skill-widget">
-                        <div class="skill-widget-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                        </div>
-                        <h3 class="skill-widget-name">Data Visualization</h3>
-                        <p class="skill-widget-desc">Matplotlib, Plotly &amp; Seaborn</p>
-                    </div>
-                    <div class="skill-widget">
-                        <div class="skill-widget-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                        </div>
-                        <h3 class="skill-widget-name">React / Node.js</h3>
-                        <p class="skill-widget-desc">Frontend &amp; backend development</p>
-                    </div>
-                    <div class="skill-widget">
-                        <div class="skill-widget-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                        </div>
-                        <h3 class="skill-widget-name">GraphQL / APIs</h3>
-                        <p class="skill-widget-desc">Data fetching &amp; integrations</p>
-                    </div>
-                    <div class="skill-widget">
-                        <div class="skill-widget-icon">
-                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
-                        </div>
-                        <h3 class="skill-widget-name">Cloud</h3>
-                        <p class="skill-widget-desc">AWS, GCP &amp; Azure</p>
+                    <div class="filters" role="group" aria-label="Filter projects">
+                        <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+                        <button class="filter" data-filter="core" aria-pressed="false">Core</button>
+                        <button class="filter" data-filter="near" aria-pressed="false">NEAR</button>
+                        <button class="filter" data-filter="monad" aria-pressed="false">Monad</button>
+                        <button class="filter" data-filter="arbitrum" aria-pressed="false">Arbitrum</button>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Portfolio Section -->
-        <section class="portfolio" id="portfolio">
-            <div class="container">
-                <p class="section-tag">Portfolio</p>
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="portfolio-grid">
-
-                    <a href="https://github.com/christian-obi/core-blockchain-dashboard" target="_blank" class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="images/dashboards/core-blockchain-q1.svg" alt="Core Blockchain Q1 2025 Dashboard">
+                <div class="work-grid">
+                    <a href="https://github.com/christian-obi/core-blockchain-dashboard" target="_blank" rel="noopener" class="card project project-featured reveal" data-tags="core">
+                        <div class="project-media">
+                            <img src="images/dashboards/core-blockchain-q1.svg" alt="Core Blockchain Q1 2025 dashboard preview" loading="lazy">
                         </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-tags">
-                                <span>Analytics</span>
-                                <span>Core Blockchain</span>
-                            </div>
+                        <div class="project-body">
+                            <div class="tags"><span>Analytics</span><span>Core</span></div>
                             <h3>Core Blockchain Q1 2025</h3>
-                            <p>Comprehensive performance dashboard showcasing Core blockchain metrics for Q1 2025</p>
+                            <p>Comprehensive performance dashboard showcasing Core blockchain metrics for Q1 2025.</p>
+                            <span class="link-arrow">View project <span aria-hidden="true">↗</span></span>
                         </div>
                     </a>
 
-                    <a href="https://github.com/christian-obi/Core-blockchain-overview-dashboard" target="_blank" class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="images/dashboards/core-blockchain-yoy.svg" alt="Core Blockchain YoY Dashboard">
+                    <a href="https://github.com/christian-obi/Core-blockchain-overview-dashboard" target="_blank" rel="noopener" class="card project reveal" data-tags="core">
+                        <div class="project-media">
+                            <img src="images/dashboards/core-blockchain-yoy.svg" alt="Core Blockchain 2024 review dashboard preview" loading="lazy">
                         </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-tags">
-                                <span>Analytics</span>
-                                <span>Core Blockchain</span>
-                            </div>
+                        <div class="project-body">
+                            <div class="tags"><span>Analytics</span><span>Core</span></div>
                             <h3>Core Blockchain 2024 Review</h3>
-                            <p>Year-on-Year performance analysis of the Core blockchain ecosystem in 2024</p>
+                            <p>Year-on-year performance analysis of the Core ecosystem in 2024.</p>
                         </div>
                     </a>
 
-                    <a href="https://github.com/christian-obi/Near-Bridge-dashboard" target="_blank" class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="images/dashboards/near-bridge.svg" alt="NEAR Bridge Dashboard">
+                    <a href="https://github.com/christian-obi/Near-Bridge-dashboard" target="_blank" rel="noopener" class="card project reveal" data-tags="near">
+                        <div class="project-media">
+                            <img src="images/dashboards/near-bridge.svg" alt="NEAR Bridge dashboard preview" loading="lazy">
                         </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-tags">
-                                <span>NEAR Protocol</span>
-                                <span>Bridge Analytics</span>
-                            </div>
+                        <div class="project-body">
+                            <div class="tags"><span>NEAR</span><span>Bridges</span></div>
                             <h3>NEAR Bridge Overview</h3>
-                            <p>Overview dashboard of the NEAR blockchain bridge performance and cross-chain activity</p>
+                            <p>Bridge performance and cross-chain activity on NEAR.</p>
                         </div>
                     </a>
 
-                    <a href="https://github.com/christian-obi/Curvance-Monad-dashboard" target="_blank" class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="images/dashboards/curvance-monad.svg" alt="Curvance Monad Dashboard">
+                    <a href="https://github.com/christian-obi/Curvance-Monad-dashboard" target="_blank" rel="noopener" class="card project reveal" data-tags="monad">
+                        <div class="project-media">
+                            <img src="images/dashboards/curvance-monad.svg" alt="Curvance on Monad dashboard preview" loading="lazy">
                         </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-tags">
-                                <span>Monad</span>
-                                <span>DeFi</span>
-                            </div>
-                            <h3>Curvance Monad</h3>
-                            <p>Dashboard exploring usage patterns and metrics from Curvance testnet data on Monad</p>
+                        <div class="project-body">
+                            <div class="tags"><span>Monad</span><span>DeFi</span></div>
+                            <h3>Curvance on Monad</h3>
+                            <p>Usage patterns and metrics from Curvance testnet data on Monad.</p>
                         </div>
                     </a>
 
-                    <a href="https://github.com/christian-obi/B14G-ecosystem-dashboard" target="_blank" class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="images/dashboards/b14g-ecosystem.svg" alt="B14G Ecosystem Dashboard">
+                    <a href="https://github.com/christian-obi/B14G-ecosystem-dashboard" target="_blank" rel="noopener" class="card project reveal" data-tags="core">
+                        <div class="project-media">
+                            <img src="images/dashboards/b14g-ecosystem.svg" alt="B14G ecosystem dashboard preview" loading="lazy">
                         </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-tags">
-                                <span>Core Blockchain</span>
-                                <span>Staking</span>
-                            </div>
+                        <div class="project-body">
+                            <div class="tags"><span>Core</span><span>Staking</span></div>
                             <h3>B14G Ecosystem</h3>
-                            <p>Analysis of B14G staking ecosystem and wallet behavior on Core blockchain</p>
+                            <p>B14G staking ecosystem and wallet behaviour on Core.</p>
                         </div>
                     </a>
 
-                    <a href="https://github.com/christian-obi/whale-vs-price" target="_blank" class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="images/dashboards/whale-vs-price.svg" alt="Whale vs Price Dashboard">
+                    <a href="https://github.com/christian-obi/whale-vs-price" target="_blank" rel="noopener" class="card project reveal" data-tags="arbitrum">
+                        <div class="project-media">
+                            <img src="images/dashboards/whale-vs-price.svg" alt="Whale vs price impact dashboard preview" loading="lazy">
                         </div>
-                        <div class="portfolio-info">
-                            <div class="portfolio-tags">
-                                <span>Arbitrum</span>
-                                <span>Whale Tracking</span>
-                            </div>
+                        <div class="project-body">
+                            <div class="tags"><span>Arbitrum</span><span>Whales</span></div>
                             <h3>Whale vs Price Impact</h3>
-                            <p>Analysis showing price impact due to whale transactions in the Arbitrum blockchain</p>
+                            <p>How whale transactions move prices on Arbitrum.</p>
                         </div>
                     </a>
-
                 </div>
             </div>
         </section>
 
-        <!-- Speaking Section -->
-        <section class="speaking" id="speaking">
+        <!-- ========================= SPEAKING ========================= -->
+        <section class="section" id="speaking">
             <div class="container">
-                <p class="section-tag">Engagements</p>
-                <h2 class="section-title">Speaking Engagements</h2>
-                <p class="section-subtitle">Sharing insights on blockchain analytics and data-driven decision making</p>
+                <div class="section-head reveal">
+                    <p class="eyebrow">04 · Speaking</p>
+                    <h2 class="section-title">On stage &amp; on panels</h2>
+                    <p class="section-lead">Sharing insights on blockchain analytics and data-driven decision making with builders across Lagos and beyond.</p>
+                </div>
+
                 <div class="speaking-grid">
-                    <div class="speaking-card">
-                        <div class="speaking-image">
-                            <img src="images/event1.jpg" alt="Speaking Engagement">
+                    <article class="card talk reveal">
+                        <div class="talk-media">
+                            <img src="images/event1.jpg" alt="Christian Obi giving a talk at the Web3Lagos Conference" loading="lazy">
+                            <span class="talk-badge">Talk</span>
                         </div>
-                        <div class="speaking-info">
-                            <h3>Event Title Here</h3>
-                            <p class="speaking-date">Date &bull; Location</p>
-                            <p class="speaking-description">Brief description of your talk or panel discussion.</p>
+                        <div class="talk-body">
+                            <h3>Web3Lagos Conference</h3>
+                            <p class="talk-meta">Lagos, Nigeria</p>
                         </div>
-                    </div>
-                    <div class="speaking-card">
-                        <div class="speaking-image">
-                            <img src="images/event2.jpg" alt="Speaking Engagement">
+                    </article>
+                    <article class="card talk reveal">
+                        <div class="talk-media">
+                            <img src="images/event2.jpg" alt="Christian Obi speaking on a panel at Nigerian Blockchain &amp; AI Week 2025" loading="lazy">
+                            <span class="talk-badge">Panel</span>
                         </div>
-                        <div class="speaking-info">
-                            <h3>Event Title Here</h3>
-                            <p class="speaking-date">Date &bull; Location</p>
-                            <p class="speaking-description">Brief description of your talk or panel discussion.</p>
+                        <div class="talk-body">
+                            <h3>Nigerian Blockchain &amp; AI Week</h3>
+                            <p class="talk-meta">2025 · Organised by CoinNewsExtra</p>
                         </div>
-                    </div>
-                    <div class="speaking-card">
-                        <div class="speaking-image">
-                            <img src="images/event3.jpg" alt="Speaking Engagement">
+                    </article>
+                    <article class="card talk reveal">
+                        <div class="talk-media">
+                            <img src="images/event3.jpg" alt="Christian Obi speaking on a panel at Glanca Lagos" loading="lazy">
+                            <span class="talk-badge">Panel</span>
                         </div>
-                        <div class="speaking-info">
-                            <h3>Event Title Here</h3>
-                            <p class="speaking-date">Date &bull; Location</p>
-                            <p class="speaking-description">Brief description of your talk or panel discussion.</p>
+                        <div class="talk-body">
+                            <h3>Glanca Lagos</h3>
+                            <p class="talk-meta">Lagos, Nigeria</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
+        <!-- ========================= CONTACT ========================= -->
+        <section class="section" id="contact">
             <div class="container">
-                <p class="section-tag">Contact</p>
-                <h2 class="section-title">Let's Work<br><span class="gradient-text">Together!</span></h2>
-                <div class="contact-links">
-                    <a href="https://www.linkedin.com/in/obi-christian/" target="_blank" class="contact-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        LinkedIn
-                    </a>
-                    <a href="https://t.me/christian_obi" target="_blank" class="contact-link">
-                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-                        Telegram
-                    </a>
-                    <a href="mailto:chukwumachris751@gmail.com" class="contact-link">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        Email
-                    </a>
+                <div class="card contact-card reveal">
+                    <div class="contact-glow" aria-hidden="true"></div>
+                    <p class="eyebrow">05 · Contact</p>
+                    <h2 class="contact-title">Let's work <span class="gradient-text">together.</span></h2>
+                    <p class="section-lead">Need a dashboard, an on-chain deep dive, or a speaker for your event? My inbox is open.</p>
+
+                    <div class="contact-email">
+                        <a href="mailto:chukwumachris751@gmail.com" class="btn btn-primary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+                            chukwumachris751@gmail.com
+                        </a>
+                        <button class="btn btn-ghost" id="copy-email" data-email="chukwumachris751@gmail.com">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            <span>Copy email</span>
+                        </button>
+                    </div>
+
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/obi-christian/" target="_blank" rel="noopener" class="contact-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://t.me/christian_obi" target="_blank" rel="noopener" class="contact-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                            Telegram
+                        </a>
+                        <a href="https://twitter.com/christian_obi" target="_blank" rel="noopener" class="contact-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            X / Twitter
+                        </a>
+                        <a href="https://github.com/christian-obi" target="_blank" rel="noopener" class="contact-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            GitHub
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <p>&copy; 2025 Christian Obi. All Rights Reserved.</p>
-            </div>
-        </footer>
-
     </main>
 
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>&copy; <span id="year">2026</span> Christian Obi. All rights reserved.</p>
+            <a href="#home" class="link-arrow">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+    </footer>
+
     <script>
-        // Mobile hamburger menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const sidebar = document.getElementById('sidebar');
+        const root = document.documentElement;
 
-        hamburger.addEventListener('click', () => {
-            sidebar.classList.toggle('open');
-            hamburger.classList.toggle('active');
+        // Theme toggle
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            const next = root.dataset.theme === 'light' ? 'dark' : 'light';
+            root.dataset.theme = next;
+            try { localStorage.setItem('theme', next); } catch (e) {}
         });
 
-        // Close sidebar on link click (mobile)
-        document.querySelectorAll('.sidebar-nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                sidebar.classList.remove('open');
-                hamburger.classList.remove('active');
+        // Mobile menu
+        const menuBtn = document.getElementById('menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        const setMenu = (open) => {
+            navLinks.classList.toggle('open', open);
+            menuBtn.classList.toggle('active', open);
+            menuBtn.setAttribute('aria-expanded', open);
+            menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        };
+        menuBtn.addEventListener('click', () => setMenu(!navLinks.classList.contains('open')));
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+        // Nav background once scrolled
+        const navWrap = document.querySelector('.nav-wrap');
+        const onScroll = () => navWrap.classList.toggle('scrolled', scrollY > 12);
+        addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // Highlight the nav link for the section in view
+        const links = [...navLinks.querySelectorAll('a')];
+        const spy = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + entry.target.id));
             });
-        });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        document.querySelectorAll('main section[id]').forEach(s => spy.observe(s));
 
-        // Active nav link on scroll
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.sidebar-nav a');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 120;
-                if (scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
+        // Reveal on scroll
+        const reveal = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in');
+                    reveal.unobserve(entry.target);
                 }
             });
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active');
-                }
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => reveal.observe(el));
+
+        // Project filters
+        const filters = document.querySelectorAll('.filter');
+        const projects = document.querySelectorAll('.project');
+        filters.forEach(btn => btn.addEventListener('click', () => {
+            const f = btn.dataset.filter;
+            filters.forEach(b => {
+                b.classList.toggle('is-active', b === btn);
+                b.setAttribute('aria-pressed', b === btn);
             });
+            projects.forEach(p => { p.hidden = f !== 'all' && !p.dataset.tags.includes(f); });
+            document.querySelector('.work-grid').classList.toggle('is-filtered', f !== 'all');
+        }));
+
+        // Copy email
+        const copyBtn = document.getElementById('copy-email');
+        copyBtn.addEventListener('click', async () => {
+            const label = copyBtn.querySelector('span');
+            try {
+                await navigator.clipboard.writeText(copyBtn.dataset.email);
+                label.textContent = 'Copied!';
+            } catch (e) {
+                label.textContent = 'Copy failed';
+            }
+            setTimeout(() => { label.textContent = 'Copy email'; }, 1800);
         });
+
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-
 </body>
 </html>
